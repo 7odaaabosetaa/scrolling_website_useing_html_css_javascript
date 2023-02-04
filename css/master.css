@@ -1,0 +1,89 @@
+*{
+    font-family: 'cairo',sans-serif;
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+body{
+    background: linear-gradient(#2d001c,#0e0033);
+    color: white;
+    height: 100vh;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+}
+.logo{
+    font-size: 45px;
+    font-weight: bolder;
+    padding: 20px;
+    text-transform: uppercase;
+}
+nav ul li{
+    display: inline-block;
+    padding:10px;
+    font-size: 20px;
+    border-radius: 30px;
+    transition: 0.5s;
+    margin-right: 20px;
+}
+nav ul li:hover,li.active{
+    background-color: white;
+    color: black;
+}
+section{
+    position: relative;
+    height: calc(100vh);
+    overflow: hidden;
+}
+section::after{
+    content:'';
+    position: absolute;
+    bottom: 1px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#2d001c,transparent);
+/* background-color: #000; */
+ } 
+section img{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+section img#moon{
+    mix-blend-mode: screen;
+    transform: translate(0,50px);
+}
+section .logo{
+position: absolute;
+top: 50vh;
+left: 50%;
+transform: translate(-50%,-150%);
+}
+.content{
+    padding: 40px;
+    position: absolute;
+    top: 100vh;
+}
+.content h2{
+padding: 20px;
+font-size: 30px;}
+.content p{
+    padding: 20px;
+    line-height: 1.5;
+    font-size: 18px;
+}
